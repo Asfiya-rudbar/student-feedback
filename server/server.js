@@ -53,7 +53,7 @@ const adminRoutes = require("./routes/admin");
 app.use("/api/admin", adminRoutes);
 
 // MongoDB connection
-mongoose.connect('mongodb://127.0.0.1:27017/feedback-db', {
+mongoose.connect(process.env.MONGODB_URI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 })
